@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on $(date)
       - docker build --tag ${TAG1} --tag ${TAG2} .
-      - docker push ${TAG1}
+      - docker push -a ${REPOSITORY_URI}
   post_build:
     commands:
       - echo Build completed on $(date)
