@@ -10,8 +10,8 @@ phases:
   build:
     commands:
       - echo Build started on $(date)
-      - docker build -t ${TAB1} -t ${TAG2} .
-      - docker push -a ${TAG1}
+      - docker build --tag ${TAB1} --tag ${TAG2} .
+      - docker push ${TAG1}
   post_build:
     commands:
       - echo Build completed on $(date)
